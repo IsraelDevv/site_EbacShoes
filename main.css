@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+header {
+    background-color: #007bff;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+header h1 {
+    color: #fff;
+    font-size: 34px;
+    margin: 0;
+}
+
+header nav {
+    margin-top: 10px;
+}
+
+header nav a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #fff;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start; /* Alinha os itens no início do contêiner */
+    gap: 5%;
+}
+
+.container-image img {
+    max-width: 100%; /* Garante que a imagem não exceda o contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.container-text {
+    flex: 1; /* Permite que o texto ocupe o espaço restante no contêiner */
+}
+
+.container-text p {
+    margin: 0; /* Remove a margem padrão do parágrafo */
+}
+
+
+.container-text h2 {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #007bff;
+}
+
+.products {
+    margin-bottom: 10px;
+}
+
+.products h2 {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.product-item {
+    flex: 1 1 calc(25% - 20px);
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-item button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.product-item button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Layout */
+@media screen and (max-width: 1024px) {
+    .container-store {
+        display: block;
+        
+    }
+
+    .container-image, .container-text {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .product-item {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 640px) {
+    header {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    header nav {
+        margin-top: 15px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .container-image, .container-text {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .product-item {
+        flex: 1 1 100%;
+    }
+}
